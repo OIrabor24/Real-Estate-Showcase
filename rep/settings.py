@@ -188,10 +188,10 @@ MESSAGE_TAGS = {
     
 }
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass 
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     pass 
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
@@ -202,4 +202,4 @@ DATABASES['default'].update(db_from_env)
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
